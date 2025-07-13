@@ -1,0 +1,117 @@
+Gestor Documental
+Desarrollar e Implementar una plataforma de gestión documental para la administración de archivos y control de expediente digitales
+en la institucion bancaria sponsor de este proyecto, esta plataforma llevara todo el ciclo de vida, de los expedientes asegurando el cumplimiento normativo, de seguridad y operatividad.
+
+Existen distintos sistemas o canales de captura de documentos, como son:
+
+- Correo electrónico
+- Aplicaciones móviles, como es la CrediClub App
+- Sistemas internos de originacion de credito como son: Sierra
+- Onboarding de clientes
+
+El sistema maneja el concepto de cliente unico, independientemente del canal de captura, el cliente es el mismo, y se le asigna un folio unico para todos sus documentos. Integrando todos los documentos en un solo expediente digital.
+
+Como componentes del sistema de gestión documental, se incluyen:
+
+- Visualizador de Expedientes
+  Busqueda por Nombre
+  Busqueda por CURP, RFC
+  Busqueda por Folio, sea un folio de cliente del core bancario SAFI, del sistema de originacion Sierra, o un Usuario de la crediClub App
+  Busqueda Avanzada por Numero de Cuenta, Numero de Tarjeta, Numero de Credito
+
+- OCR
+  Reconocimiento de texto en documentos escaneados o imágenes, permitiendo la búsqueda y recuperación de información específica dentro de los documentos.
+  Permite la extracción de datos clave como:
+
+  - Nombre del Cliente
+  - CURP
+  - RFC
+  - Domicilio
+  - Permite la interpreacion de comprobantes de:
+    -- Domicilio
+    -- Ingresos, estados de cuenta bancarios
+    -- Comprobanets de Nomina
+
+- Permite la indexación de documentos para una búsqueda más eficiente y rápida.
+
+- Clasificación de Documentos
+
+  - Parametrizar tipos de documentos
+  - Configuracion de Familias de Documentos
+  - Asignar tipos de documentos por familia, por ejemplo:
+    -- Identificación Oficial pueden ser:
+    -- Credencial de Elector
+    -- Pasaporte
+    -- Cartilla Militar
+
+- Validación de Documentos
+
+  - Verificación de autenticidad y validez de documentos, como identificación oficial, comprobantes de domicilio, etc.
+  - Cada tipo de documento puede tener sus propias reglas de validación, como:
+    -- Algunas son auomatizadas, como la validación de CURP o RFC, mediante APIS con terceros
+    -- Algunas validaciones son manuales, por una persona o agente, eso se configura por tipo de documento
+    -- Comprobante de Ingresos: Asegurar que los datos sean consistentes con los registros del cliente.
+
+- Gestión de Versiones
+
+  - Permite llevar un control de las versiones de los documentos, asegurando que siempre se tenga acceso a la versión más reciente.
+  - Registro de cambios y actualizaciones en los documentos, incluyendo quién realizó el cambio y cuándo.
+  - Muestra en un time Line las fechas de actualizacion del documento y sus versiones
+
+- Seguridad y Control de Acceso
+
+  - Implementación de controles de acceso para garantizar que solo usuarios autorizados puedan ver o modificar los documentos.
+  - Registro de auditoría para rastrear quién accedió o modificó un documento.
+  - Permite la asignación de permisos específicos a usuarios o grupos de usuarios, asegurando que solo las personas adecuadas tengan acceso a información sensible.
+  - Implementación de cifrado
+    - Cifrado de documentos para proteger la información sensible durante su almacenamiento y transmisión.
+
+- Metadatos de Documentos
+
+  - Cada documento puede tener metadatos asociados, como:
+    - Tipo de Documento
+    - Clasificación
+    - Fecha de Emisión
+    - Estado del Documento (Vigente, Vencido, etc.)
+    - Fecha Expiracion
+    - Proceso Asociado (por ejemplo, solicitud de crédito, apertura de cuenta, etc.)
+
+- Conectividad y automatización
+
+  - Integración con otros sistemas internos y externos para la captura automática de documentos.
+  - Automatizaciones al Recibir Documentos por correo electrónico y su integración al sistema de gestión documental.
+  - Automatización de flujos de trabajo relacionados con la gestión documental, como la aprobación de documentos o la notificación de vencimientos.
+  - Conexion con otros sistemas internos:
+    - Conexión con el sistema de originación de crédito (Sierra) para la captura automática de documentos relacionados con las solicitudes de crédito.
+    - Integración con el sistema de gestión de clientes (SAFI) para mantener actualizados los expedientes digitales de los clientes.
+    - Conexión con la CrediClub App para la captura y gestión de documentos a través de la aplicación móvil.
+    - Sistema de Prevencio8n de Lavado de Dinero (PLD) para la validación y verificación de documentos relacionados con la identificación del cliente.
+    - Sistema de Prevencion de Fraude como el si8stema internio Spei Guard Monitor
+
+- Api First
+
+  - Permite la integración con otros sistemas y aplicaciones a través de una API RESTful, facilitando la captura y gestión de documentos desde diferentes fuentes, para registro y consulta de documentos.
+
+- Colaboración y Chat acerca del documento
+- Permite realizar comentarios o anotaciones directamente en el documento., facilitando la colaboración en tiempo real.
+- Intgración con herramientas de chat o mensajería para discutir documentos específicos como es el caso de Microsoft Teams.
+
+- Cumplimiento normativo
+  Debe cumplir con las regulaciones y normativas aplicables, como la Ley de Protección de Datos Personales y la NOM-151-SCFI-2016, que establece los requisitos para la conservación de documentos electrónicos.
+- Sellos de Tiempo
+
+  - Implementación de sellos de tiempo para garantizar la integridad y autenticidad de los documentos digitales.
+  - Los sellos de tiempo proporcionan una prueba de que un documento existió en un momento específico y no ha sido alterado desde entonces.
+
+- Integración con Blockchain
+  - Implementación de tecnología blockchain para garantizar la integridad y autenticidad de los documentos digitales.
+  - Utilización de la blockchain de Microsoft Azure para el almacenamiento seguro y la verificación de documentos digitales.
+  - Hash del documento se almacena en la blockchain, proporcionando una prueba inmutable de la existencia y el contenido del documento en un momento específico.
+
+Fuentes:
+https://docsolutions.com/gestor-documental/
+https://docsolutions.com/es-servicios/#captura
+https://www.youtube.com/watch?v=Jc2skZufE0I&t=119s&ab_channel=Odoo
+https://www.gada-i.com/blog/gestion-documental/gestion-documental-en-el-sector-financiero-beneficios-desafios-ejemplos-y-casos-de-uso/
+
+Archivado y Gestión de Documentos Digitales en la nube de Azure con Inteligencia Artificial
